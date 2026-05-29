@@ -1,86 +1,28 @@
-import { Image } from "expo-image";
-import { StyleSheet } from "react-native";
-
-import { HelloWave } from "@/components/hello-wave";
-import ParallaxScrollView from "@/components/parallax-scroll-view";
-import { ThemedText } from "@/components/themed-text";
-import { ThemedView } from "@/components/themed-view";
-import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
-      headerImage={
-        <Image
-          source={require("@/assets/images/partial-react-logo.png")}
-          style={styles.reactLogo}
-        />
-      }
-    >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome to Expo!</ThemedText>
-        <HelloWave />
-      </ThemedView>
+    <View style={styles.container}>
+      <Text style={styles.text}>Welcome to React Native☠</Text>
 
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText>
-          {" "}
-          <ThemedText type="defaultSemiBold"></ThemedText>{" "}
-          <ThemedText type="defaultSemiBold"></ThemedText>{" "}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">WELCOME TO REACT NATIVE </ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction
-              title="Action"
-              icon="cube"
-              onPress={() => alert("Action pressed")}
-            />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert("Share pressed")}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert("Delete pressed")}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">HELLO YEAR THREE</ThemedText>
-        <ThemedText>AMARA REPLACE </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      <Text style={styles.text}>I will be a app developer</Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "#5511c4",
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+  text: {
+    fontSize: 31,
+    fontWeight: "bold",
+    fontStyle: "italic",
+    color: "#af0d0d",
+    padding: 20,
+    textAlign: "center",
+    margin: 15,
   },
 });
