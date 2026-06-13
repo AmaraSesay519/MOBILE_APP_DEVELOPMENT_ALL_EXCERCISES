@@ -8,6 +8,8 @@ export default function App() {
   const [fullName, setFullName] = useState('');
   const [studentID, setStudentID] = useState('');
   const [department, setDepartment] = useState('');
+   {/*const [register, setRegister] = useState(false)*/}
+  const [register, setRegister] = useState(true)
 
   
   
@@ -31,6 +33,14 @@ export default function App() {
   }, [fullName]);
 
   
+  
+
+  //logout function
+  const logout = () =>{
+    setFullName('');
+    setDepartment('');
+    setStudentID('');
+  }
 
   return (
     <ScrollView contentContainerStyle={styles.container}> {/*main container*/}
