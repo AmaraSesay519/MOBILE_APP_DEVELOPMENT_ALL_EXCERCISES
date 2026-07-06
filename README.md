@@ -1,7 +1,8 @@
 # WELCOME TO MY MOBILE APPLICATION DEVELOPMENT 
 
 ## Author:
-- Amara Sesay 10519
+- Name: Amara Sesay 10519
+-Email: amarasesay288@gmail.com
 
 ## 📱 React Native Class Exercises & Projects
 
