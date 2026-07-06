@@ -9,6 +9,8 @@ export default function App() {
   const [studentID, setStudentID] = useState('');
   const [department, setDepartment] = useState('');
   {/*const [register, setRegister] = useState(false)*/}
+
+  {/*to show the student profile after registration*/}
   const [register, setRegister] = useState(true)
 
   
@@ -16,13 +18,14 @@ export default function App() {
  
   {/* Function to validate the form inputs. It checks if any of the fields are empty*/}
   const validationForm = () => {
-    if (!fullName) return Alert.alert('Error', 'Full Name is required');
+    if (!fullName) return Alert.alert('Error', ' Name is required');
     if (!studentID) return Alert.alert('Error', 'Student ID is required');
     if (!department) return Alert.alert('Error', 'Department is required');
     
     
     Alert.alert('Success', 'Registration Successful!');
   };
+  
   {/* Add UseEffect */}
   useEffect(() => {
     console.log('Application Loaded');
@@ -79,15 +82,20 @@ export default function App() {
         />
 
         {/*Display Entered Information*/}
-        <Text>Full Name: {fullName}</Text>
-        <Text>Student ID: {studentID}</Text>
-        <Text>Department: {department}</Text>
+        <View style ={styles.studentProfile}>
+
+        <Text style={styles.studentProfileText}>Student Profile</Text>
+        <Text style={styles.ProfileText}>Full Name: {fullName}</Text>
+        <Text style={styles.ProfileText}>Student ID: {studentID}</Text>
+        <Text style={styles.ProfileText}>Department: {department}</Text>
+        </View>
+        
 
         {/* Button To register after fill in the basic information */}
         <View style={styles.buttonContainer}>
           <Button title="Register" onPress={validationForm} />
-
         </View>
+
       </View>
       
     </ScrollView>
@@ -102,7 +110,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f2f2f2',
-    padding: 20,
+    padding: 10,
+    margin: 8,
+
+    
+   
+    
   },
 
   card: {
@@ -112,6 +125,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 20,
     alignItems: 'center',
+    margin:20,
 
     // shadow (for iOS)
     shadowColor: '#000',
@@ -154,5 +168,29 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 10,
     width: '100%',
+    borderRadius: 30,
+  },
+
+  studentProfile:{
+    margin:20,
+    padding: 10,
+    color: 'blue',
+    backgroundColor: 'skyblue',
+    width: '100%',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',   
+  },
+  studentProfileText:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: 'blue', 
+  },
+  ProfileText:{
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: 'black',
   },
 });
