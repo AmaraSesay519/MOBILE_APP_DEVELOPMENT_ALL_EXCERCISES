@@ -2,11 +2,11 @@
 
 ## Author:
 - Name: Amara Sesay 10519
--Email: amarasesay288@gmail.com
+- Email: amarasesay288@gmail.com
 
 ## 📱 React Native Class Exercises & Projects
 
-A collection of practical exercises and mini-projects built with **React Native** and **Expo CLI**, completed as part of our class sessions under the guidance of our lecturer Engineer Brato. This repository documents hands-on learning covering core mobile development concepts, component design, navigation, state management, and API integration.
+A collection of all practical exercises and mini-projects built with **React Native** and **Expo CLI**, completed as part of our class sessions under the guidance of our lecturer Engineer Brato. This repository documents hands-on learning covering core mobile development concepts, component design, navigation, state management, and API integration.
 
 
 
