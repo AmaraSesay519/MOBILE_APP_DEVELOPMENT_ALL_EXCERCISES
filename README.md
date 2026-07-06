@@ -1,8 +1,11 @@
-# WELCOME TO MY MOBILE APPLICATION DEVELOPMENT
+# WELCOME TO MY MOBILE APPLICATION DEVELOPMENT 
+
+## Author:
+- Amara Sesay 10519
 
 ## 📱 React Native Class Exercises & Projects
 
-A collection of practical exercises and mini-projects built with **React Native** and **Expo CLI**, completed as part of our class sessions under the guidance of our lecturer. This repository documents hands-on learning covering core mobile development concepts, component design, navigation, state management, and API integration.
+A collection of practical exercises and mini-projects built with **React Native** and **Expo CLI**, completed as part of our class sessions under the guidance of our lecturer Engineer Brato. This repository documents hands-on learning covering core mobile development concepts, component design, navigation, state management, and API integration.
 
 
 
@@ -44,10 +47,10 @@ By working through the exercises in this repository, the following objectives we
 | Development Platform | [Expo CLI](https://docs.expo.dev/)  |
 | Language             | JavaScript / TypeScript             |
 | Navigation           | React Navigation                    |
-| State Management     | React Hooks / Context API           |
-| Styling              | StyleSheet API / Flexbox            |
+| State Management     | React Hooks          |
+| Styling              | StyleSheet            |
 | Version Control      | Git & GitHub                        |
-| Package Manager      | npm / yarn                          |
+| Package Manager      | npm                           |
 | Testing (optional)   | Jest / React Native Testing Library |
 
 
@@ -62,7 +65,6 @@ Before setting up this project, ensure the following tools are installed on your
 - [Git](https://git-scm.com/)
 - [Expo Go](https://expo.dev/client) app installed on your physical device (Android/iOS), **or**
 - An emulator/simulator:
-  - Android Studio (for Android Emulator)
   - Xcode (for iOS Simulator — macOS only)
 - A code editor such as [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -128,7 +130,7 @@ Each exercise/project is a self-contained Expo application. After installing dep
 
 3. A QR code will appear in the terminal or Expo Dev Tools browser tab.
 
----
+
 
 ## ▶️ Running the Application
 
