@@ -47,16 +47,21 @@ export default function App() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}> {/*main container*/}
+    <View style={styles.container_header}>
 
-      {/* Card Container */}
-      <View style={styles.card}>
-
+      <View style={styles.header}>
         <Image
           source={{ uri: 'https://picsum.photos/200' }}style={styles.logo}/> {/* logo of the application */}
 
-        <Text style={styles.title}>Student Registration</Text>
-        <Text>Welcome Students</Text>
+        <Text style={styles.title}>Student Registration App</Text>
+        <Text style={styles.subtitle}>Welcome to the Unimak Students Portal </Text>
+         <View style={styles.buttonContainer}>
+          <Button title="NextScreen" onPress={validationForm} />
+        </View>
+      </View>
 
+      {/* Card Container */}
+      <View style={styles.card}>
         <Text style={styles.subtitle}>Fill in your details below</Text>
 
         {/* Input Fields Registration Form*/}
@@ -81,23 +86,22 @@ export default function App() {
           onChangeText={setDepartment}
         />
 
-        {/*Display Entered Information*/}
-        <View style ={styles.studentProfile}>
+        {/* Button To register after fill in the basic information */}
+        <View style={styles.buttonContainer}>
+          <Button title="Register" onPress={validationForm} />
+        </View>
+      </View>
+      
+      {/* Student Profile Section */}
 
+      {/*Display Entered Information*/}
+        <View style ={styles.studentProfile}>
         <Text style={styles.studentProfileText}>Student Profile</Text>
         <Text style={styles.ProfileText}>Full Name: {fullName}</Text>
         <Text style={styles.ProfileText}>Student ID: {studentID}</Text>
         <Text style={styles.ProfileText}>Department: {department}</Text>
         </View>
-        
-
-        {/* Button To register after fill in the basic information */}
-        <View style={styles.buttonContainer}>
-          <Button title="Register" onPress={validationForm} />
-        </View>
-
-      </View>
-      
+    </View>
     </ScrollView>
   );
 }
@@ -112,10 +116,33 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f2f2',
     padding: 10,
     margin: 8,
+    
+  },
+  container_header: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e0e0e0',
+    padding: 10,
+    margin: 8,
+    width: '100%',
+    borderStyle: 'solid',
+    borderWidth: 2,
+    borderColor: 'green',
+    borderRadius: 10,
 
-    
-   
-    
+  },
+  header: {
+    flex:1,
+    alignItems: 'center',
+    margin: 20,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding:10,
+    width: '100%',
+    borderRadius: 10,
+    backgroundColor: '#f9f9f9',
   },
 
   card: {
@@ -153,6 +180,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'gray',
     marginBottom: 20,
+    fontStyle: 'italic',
   },
 
   input: {
