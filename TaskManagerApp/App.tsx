@@ -1,14 +1,8 @@
 // Import React and the useState hook.
-// useState lets a component "remember" data between renders (this is called "state").
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
-} from 'react-native';
+
+// useState lets a component "remember" data between renders (this is called "state").
+import {View,Text,TextInput,TouchableOpacity,FlatList,StyleSheet,} from 'react-native';
 
 // Define the "shape" of a single Task using a TypeScript type.
 // This acts like a contract: every task object MUST have these three fields,
@@ -18,9 +12,6 @@ type Task = {
   title: string;      // The actual text of the task, e.g. "Buy groceries".
   completed: boolean; // Whether the task has been marked as done (true) or not (false).
 };
-
-// The main component of the app. React Native renders whatever this function returns.
-// "export default" means this is the primary thing this file provides to the rest of the app.
 export default function App() {
 
   // State variable #1: holds the full list of tasks.
@@ -32,7 +23,7 @@ export default function App() {
   // useState<string>('') means it starts as an empty string.
   const [inputText, setInputText] = useState<string>('');
 
-  // ---------- FUNCTION: Add a new task ----------
+  // FUNCTION: Add a new task 
   // Runs when the user presses the "Add" button.
   const addTask = (): void => {
     // Guard clause: if the input is empty (or just spaces), do nothing.
@@ -139,14 +130,13 @@ export default function App() {
   );
 }
 
-// ---------- STYLES ----------
+//STYLES 
 // StyleSheet.create() is similar to CSS, but written as a JavaScript object.
-// It's optimized by React Native for better performance than plain inline objects.
 const styles = StyleSheet.create({
   container: {
-    flex: 1,            // Take up the full available screen space.
-    paddingTop: 60,      // Push content down from the top (avoids phone status bar/notch).
-    paddingHorizontal: 20, // Left/right padding.
+    flex: 1,           
+    paddingTop: 60,      
+    paddingHorizontal: 20, 
     borderStyle: 'solid',
     borderWidth: 2,
     borderColor: 'green',
@@ -164,21 +154,21 @@ const styles = StyleSheet.create({
   },
   
   inputRow: {
-    flexDirection: 'row', // Places children (input + button) side by side horizontally.
+    flexDirection: 'row', 
     marginBottom: 20,
   },
   input: {
-    flex: 1,             // Input box grows to fill all remaining horizontal space.
+    flex: 1,             
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 8,
     padding: 10,
-    marginRight: 10,     // Small gap between input box and Add button.
+    marginRight: 10,     
   },
   addButton: {
-    backgroundColor: '#2e86de', // Blue background.
+    backgroundColor: '#2e86de', 
     borderRadius: 8,
-    justifyContent: 'center',   // Vertically centers the "Add" text.
+    justifyContent: 'center',   
     paddingHorizontal: 15,
   },
   addButtonText: {
@@ -186,15 +176,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   taskRow: {
-    flexDirection: 'row',        // Task text and Delete button sit side by side.
-    justifyContent: 'space-between', // Push them to opposite ends of the row.
-    alignItems: 'center',        // Vertically align them in the middle.
+    flexDirection: 'row',       
+    justifyContent: 'space-between', 
+    alignItems: 'center',        
     padding: 12,
-    borderBottomWidth: 1,        // Thin line under each task, like a list divider.
+    borderBottomWidth: 1,        
     borderBottomColor: '#eee',
   },
   taskTextWrapper: {
-    flex: 1, // Takes up all remaining space so "Delete" stays neatly on the right.
+    flex: 1, 
   },
   taskText: {
     fontSize: 16,
